@@ -1,5 +1,6 @@
-body{ /*هينا غيرت الخط في الصفحة كلها*/
-  font-family: 'Handlee', cursive;
+/* لتغيير الخط في الصفحة كلها */
+body{
+ font-family: 'Lora', serif;
   margin: 0;
 }
 
@@ -21,7 +22,6 @@ a:hover{ /* Phone Navigation تنسيقات للـ */
 input, textarea{
   height: 32px;
   padding: 0 16px;
-  font-family: 'Handlee', cursive;
   font-size: 18px;
   border: none;
   box-shadow: inset 2px 2px 10px -4px rgba(0, 0, 0, 0.4);
@@ -31,44 +31,45 @@ input:focus, textarea:focus{ /*عشان ألغي الحواف السوداء ع�
 }
 
 /* العبارة الترحيبية  */
-h1{
-  padding: 8px;
-  font-size: 50px;
-  margin: 0;
-}
-#banner h3{
-border-radius: 8px;
-padding: 0 25px;
-font-size: 32px;
-}
-#banner{
+ #banner{
  height: 100vh;
  display: flex;
- align-items: center;
- justify-content: center;
+ justify-content: flex-end;
  flex-direction: column;
- background: RGB(255, 255, 255, 0.2) /*غطاء أبيض شبه شفاف على الصورة*/
-  url('https://www.urbanjunglebloggers.com/wp-content/uploads/2018/02/urban-jungle-bloggers-conservatory-archives-11-1.jpg');
+ background: url('https://images.squarespace-cdn.com/content/v1/580e572b29687f9f7c254951/1557345571131-L7LP9HQWVGWU8LQC4MHE/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/Living+Room+spring+refresh+6?format=1500w');
  background-size: cover;
  background-attachment: fixed;
  background-position: center;
  background-blend-mode: overlay;
- color: black; /*لون الكلام*/
-}
-
+ color: white;
+ }
+ #banner h1{
+   padding: 0 30px;
+   font-size: 40px;
+ }
+ #banner h3{
+   padding: 0 24px;
+   padding-right: 150px;
+   font-size: 32px;
+ }
+ .header{
+   border-radius: 8px;
+   background: RGB(0, 0, 0, 0.3);
+   padding: 30px;
+ }
 /* Search Box */
 #searchBox{
   position: fixed;
   right: 0;
   top: 24px;
-  width: 500px;
+  width: 350px;
   pointer-events: none;
   z-index: 50;
   transition: 0.4s;
 }
 #searchBox input{
-  height: 30px;
-  width: 50%;
+  height: 35px;
+  width: 100%;
 }
 
 /* Navigation */
@@ -78,18 +79,19 @@ nav{
   width: 100%;
   margin: 0;
   position: fixed;
-  font-family: 'Handlee', cursive;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
   padding: 0 16px 0 0;
   box-sizing: border-box;
   z-index: 100;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.5); /* ظل خفيف أسفل الناف*/
+
 }
 nav a{
   padding: 0 32px;
   color: black; /* Navigation Menu لون نص الـ */
-  transition: 0.4s
+  transition: 0.4s;
 }
 nav a:hover{
   text-decoration: none;
@@ -103,6 +105,7 @@ nav ul{
   height: 100%;
   margin: 0;
 }
+/* هينا الكود أنه الناف الحالية تكون اكتيف */
 #logoImg{
   display: flex;
   height: 100%;
@@ -112,19 +115,20 @@ nav ul{
   transition: .4s;
 }
 #logoImg img{ /* حجم الصورة */
-  height: 100px;
+  height: 75px;
 }
 #logoImg img{ /*إذا كانت خلفية اللوقو شفافة; ممكن أغير لونها إذا ممر المستخدم الماوس */
-  background: green;
+  background: white;
 }
 #menuIcon { /* Menu Icon */
   height: 100%;
   font-size: 28px;
   padding: 0 4px;
-  display: none; /* لإخفاء المنيو أيكون في طريقة عرض المتصفح */
+  display: none;/* لإخفاء المنيو أيكون في طريقة عرض المتصفح */
   align-items: center;
 }
 #searchIcon { /* Search Icon */
+  color: black;
   padding: 0 32px;
   cursor: pointer;
   transition: 0.4s;
@@ -132,28 +136,248 @@ nav ul{
 #searchIcon:hover {
   color: green; /* اللون اللي يطلع لما يمرر المستخدم الماوس على السيرتش ايكون */
 }
-
-/* indoor and outdoor plants cards*/
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
+/* Slideout Menu (Phone Navigation) */
+#slideoutMenu{
+  display: none;
+  background: white; /* لون الخلفية */
+  z-index: 100;
+  position: fixed;
+  transition: 0.4s;
+  margin-top: 72px;
+  width: 100%;
+  text-align: center; /* مكان النص */
+  opacity: 0;
+  pointer-events: none;
 }
-@media screen and (max-width: 650px) { /* Display the cards below each other instead of side by side on small screens */
-  .column {
-    width: 100%;
+#slideoutMenu ul{
+  list-style: none;
+  padding: 0 32px;
+}
+#slideoutMenu ul li{
+  padding: 8px;
+}
+#slideoutMenu a{ /* أعدادات النص */
+  font-size: 20px;
+}
+#slideoutMenu input{
+  width: 100%;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center; /* مكان النص */
+}
+/* إعدادات الصفحة الصغيرة */
+@media screen and ( max-width: 1130px ) {
+  nav ul {
+     display: none; /* لإخفاء النافقيشن منيو */
+  }
+  #menuIcon{ /* لإظهار المنيو ايكون */
+    display: flex;
+  }
+  /* #menuIcon:hover{
+    color: gold;
+  } */
+  #slideoutMenu{
     display: block;
   }
+  #searchBox{
+    display: none;
+  }
+  #banner h3{
+    padding: 0 24px;
+  }
+
 }
-.card { /*shadows for the cards*/
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+@media screen and (max-width: 600px) {
+  main {
+    overflow-x: hidden;
+  }
+  /* لتغيير حجم العبارة الترحيبية في الشاشة الصغيرة */
+  #banner h1 {
+    font-size: 30px;
+    padding-right: 0;
+    padding-left: 20px;
+
+  }
+  #banner h3{
+    font-size: 20px;
+  }
+  #banner{
+    overflow-x: hidden;
+  }
 }
-.plantsType { /* Some left and right padding */
+/* indoor and outdoor plants cards*/
+ .plantsCards{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    min-height: 100vh;
+    background: #b3a892;
+    font-family: sans-serif;
+  }
+  .box{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+  }
+  .card{
+    position: relative;
+    width: 300px;
+    height: 350px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow:0 2px 10px rgba(0,0,0,.2);
+  }
+  .card:before,
+  .card:after
+  {
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+    z-index:-1;
+  }
+  .card:hover:before{
+  transform: rotate(20deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card:hover:after{
+  transform: rotate(10deg);
+  box-shadow: 0 2px 20px rgba(0,0,0,.2);
+  }
+  .card .imgBx{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  background: #222;
+  transition: 0.5s;
+  z-index: 1;
+  }
+
+  .card:hover .imgBx
+  {
+    bottom: 80px;
+  }
+
+  .card .imgBx img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .card .details{
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+  }
+
+  .card .details h2{
+   margin: 0;
+   padding: 0;
+   font-weight: 600;
+   font-size: 20px;
+   color: #777;
+   text-transform: uppercase;
+  }
+
+  .card .details h2 span{
+  font-weight: 500;
+  font-size: 16px;
+  color: #f38695;
+  display: block;
+  margin-top: 5px;
+   } 
+
+/* Contact us شغل هنا*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+  margin: 0; /*خطوط العرض */
+  padding: 0; /*االمساحة لجميع العناصر الافتراضية صفر */
+}
+#contactSection{
+  background: url('https://i.pinimg.com/474x/25/f8/79/25f8796fd079fc9ce9ac21d0867e5fb2.jpg');
+  background-blend-mode: overlay;
+}
+.container{/*contact us تفاصيل العرض والحجم والون */
+   max-width: 800px;
+  height: 600px;
+  background: #fff;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(72,98,85, 0.6);
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.container p{
+  text-transform: uppercase;
   text-align: center;
+  letter-spacing: 1px;
+  font-size: 45px;
+  margin-bottom: 20px;
+  color: #486255;
 }
-.plantsType::after, .row::after { /* Clear floats */
-  content: "";
-  clear: both;
-  display: table;
+
+.input,.msg .area{ /* التحكم بحجم البوكس ومقاس الخط مثل الاسم والايميل ولجميع العناصر في الكونتاكت*/
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border: 2px solid #e9eaea;
+  font-size: 14px;
+  border-radius: 5px;
+  outline: none;
+  transform: all 0.5s ease;
+}
+
+.login .input{ /* حركنا بوكس الاست نيم الى الجهة اليمنى*/
+  width: 48%;
+  float: left;
+  margin-right: 4%;
+}
+
+.login .input:last-child{ /* حركنا بوكس الاست نيم الى الجهة اليمنى*/
+  margin-right: 0;
+}
+
+.msg .area{ /*حجم بوكس المسج*/
+  height: 200px;
+}
+
+.btn{ /* التحكم ببوكس السيند مسج */
+  width: 250px;
+  background: #486255;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.input:focus,.msg .area:focus{/* اذا ضغطنا على البوكس راح يطلع لي حدود خضراء*/
+  border: 2px solid #486255;
+}
+
+::-webkit-input-placeholder{ /* يتحكم بمقاس النص في البوكس*/
+  font-family: "Roboto",sans-serif;
 }

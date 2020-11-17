@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make the website responsive-->
+  <mata http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Connect CSS Style-->
+  <link rel="stylesheet" href="style.css">
+  <!--For GoogleFont-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <!--for Icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+  <title>Living Leaves</title>
+</head>
+
+<body>
+  <div id="slideoutMenu"> <!--Slideout Menu (Phone Navigation)-->
+    <ul>
+      <li>
+        <a href="#"> Indoor Plant </a>
+      </li>
+      <li>
+        <a href="#"> Outdoor Plant </a>
+      </li>
+      <li>
+        <a href="#"> Blog </a>
+      </li>
+      <li>
+        <a href="#C"> Contact us </a>
+      </li>
+      <li> <!--Search-->
+        <input type="text" placeholder="Search Here " name="Search">
+      </li>
+    </ul>
+  </div>
+
+  <nav>
+    <div id=logoImg> <!--logo-->
+      <a href="#"> <!--home page link-->
+        <img src="WebProject/logo.jpeg" alt="LivingLeaves Logo">
+      </a>
+    </div>
+    <div id="menuIcon"> <!--Menu Icon-->
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul> <!--Navigation Menu-->
+      <li>
+        <a href="#"> Indoor Plant </a>
+      </li>
+      <li>
+        <a href="#"> Outdoor Plant </a>
+      </li>
+      <li>
+        <a href="#"> Blog </a>
+      </li>
+      <li>
+        <a href="#C"> Contact us </a>
+      </li>
+      <li> <!--Search, just the icon-->
+        <div id="searchIcon"> <!--Search Icon-->
+          <i class="fas fa-search"> </i>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div id="searchBox"> <!--Search Box-->
+    <input type="text" placeholder="Search Here">
+  </div>
+
+  <div id="banner"> <!-- العبارة الترحيبية -->
+    <header class="header">
+    <h1> Living Leaves! </h1>
+    <h3> your helpful note to take care of your indoor, outdoor plants and your green friends at home, to grow up together. <h3>
+    </header>
+  </div>
+
+  <main>
+    <section class="plantsCards"> <!--indoor and outdoor plants cards-->
+      <div class="box">
+          <div class="card" herf="#">
+            <div class="imgBx">
+                <img src="https://i.pinimg.com/564x/cf/51/d2/cf51d24bae63a9eb4548e80fbff641b6.jpg" alt="images">
+            </div>
+            <div class="details">
+                <h2> INDOOR PLANTS <br><span> click to show </span></h2>
+            </div>
+          </div>
+
+           <div class="card" herf="#" >
+             <div class="imgBx">
+                <img src="https://i.pinimg.com/564x/a3/09/2b/a3092b923de19bb8b3d9b1ae070eacfc.jpg" alt="images">
+             </div>
+             <div class="details">
+                <h2> OUTDOOR PLANTS <br><span> click to show </span></h2>
+              </div>
+           </div>
+
+      </div>
+    </section>
+
+    <section> <!--Bloge-->
+
+    </section>
+
+    <!--Contact Us-->
+    <section id="contactSection">
+      <div class="container">
+              <h2 id="C"></h2>
+                <p>CONTACT US</p>
+
+                <div class="login">
+                  <input type="text" placeholder="First Name" class="input">
+                  <input type="text" placeholder="Last Name" class="input">
+
+          </div>
+
+          <div class=" Email">
+            <input type="text" placeholder="Your Email Address"  class="input">
+          </div>
+
+          <div class="msg">
+            <textarea  class="area" placeholder=" Message"></textarea>
+          </div>
+
+        <div class="btn">Send Message</div>
+      </div>
+    </section>
+
+    <footer> <!--تذييل الصفحة-->
+
+      <div> <!--أقتباس عن النباتات-->
+
+      </div>
+
+    </footer>
+
+  </main>
+
+  <!--Connect JavaScript files-->
+  <script src="mainJS.js"> </script>
+</body>
+
+</html>
