@@ -1,7 +1,7 @@
 /* لتغيير الخط في الصفحة كلها */
 body{
  font-family: 'Lora', serif;
-  margin: 0;
+ margin: 0;
 }
 
 main{
@@ -34,7 +34,7 @@ input:focus, textarea:focus{ /*عشان ألغي الحواف السوداء ع�
  #banner{
  height: 100vh;
  display: flex;
- justify-content: flex-end;
+ justify-content: flex-end; /* مكان النص */
  flex-direction: column;
  background: url('https://images.squarespace-cdn.com/content/v1/580e572b29687f9f7c254951/1557345571131-L7LP9HQWVGWU8LQC4MHE/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/Living+Room+spring+refresh+6?format=1500w');
  background-size: cover;
@@ -53,7 +53,7 @@ input:focus, textarea:focus{ /*عشان ألغي الحواف السوداء ع�
    font-size: 32px;
  }
  .header{
-   border-radius: 8px;
+   /* border-radius: 8px; */
    background: RGB(0, 0, 0, 0.3);
    padding: 30px;
  }
@@ -122,7 +122,7 @@ nav ul{
 }
 #menuIcon { /* Menu Icon */
   height: 100%;
-  font-size: 28px;
+  font-size: 25px; /* حجم الأيكون */
   padding: 0 4px;
   display: none;/* لإخفاء المنيو أيكون في طريقة عرض المتصفح */
   align-items: center;
@@ -130,11 +130,31 @@ nav ul{
 #searchIcon { /* Search Icon */
   color: black;
   padding: 0 32px;
+  padding-left: 0;
   cursor: pointer;
   transition: 0.4s;
 }
 #searchIcon:hover {
   color: green; /* اللون اللي يطلع لما يمرر المستخدم الماوس على السيرتش ايكون */
+}
+
+ /* Sign in */
+#signIn {
+  color: black;
+  cursor: pointer;
+}
+#signIn:hover{
+  color: green;
+}
+/* Sign in Icon */
+#signIn i{
+font-size: 20px;
+}
+#signIn a{
+  padding-left: 0;
+}
+#contactUs{
+  padding-right: 30px; /* وباقي الناف signInالمسافة بين الـ */
 }
 /* Slideout Menu (Phone Navigation) */
 #slideoutMenu{
@@ -165,13 +185,15 @@ nav ul{
   font-size: 20px;
   text-align: center; /* مكان النص */
 }
+
 /* إعدادات الصفحة الصغيرة */
-@media screen and ( max-width: 1130px ) {
-  nav ul {
-     display: none; /* لإخفاء النافقيشن منيو */
-  }
+@media screen and ( max-width: 1290px ) {
+ nav ul {
+  display: none; /* لإخفاء النافقيشن منيو */
+ }
   #menuIcon{ /* لإظهار المنيو ايكون */
     display: flex;
+    cursor: pointer;
   }
   /* #menuIcon:hover{
     color: gold;
@@ -185,7 +207,6 @@ nav ul{
   #banner h3{
     padding: 0 24px;
   }
-
 }
 
 @media screen and (max-width: 600px) {
@@ -205,106 +226,184 @@ nav ul{
   #banner{
     overflow-x: hidden;
   }
+  #logoImg{
+    padding: 0 0;
+  }
 }
-/* indoor and outdoor plants cards*/
+
+/* Indoor and Outdoor plants cards
  .plantsCards{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    min-height: 100vh;
-    background: #b3a892;
-    font-family: sans-serif;
-  }
-  .box{
-    width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-gap: 15px;
-    margin: 0 auto;
-  }
-  .card{
-    position: relative;
-    width: 300px;
-    height: 350px;
-    background: #fff;
-    margin: 0 auto;
-    border-radius: 4px;
-    box-shadow:0 2px 10px rgba(0,0,0,.2);
-  }
-  .card:before,
-  .card:after
-  {
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    background: #fff;
-    transition: 0.5s;
-    z-index:-1;
-  }
-  .card:hover:before{
-  transform: rotate(20deg);
-  box-shadow: 0 2px 20px rgba(0,0,0,.2);
-  }
-  .card:hover:after{
-  transform: rotate(10deg);
-  box-shadow: 0 2px 20px rgba(0,0,0,.2);
-  }
-  .card .imgBx{
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  background: #222;
-  transition: 0.5s;
-  z-index: 1;
-  }
-
-  .card:hover .imgBx
-  {
-    bottom: 80px;
-  }
-
-  .card .imgBx img{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  .card .details{
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      height: 60px;
-      text-align: center;
-  }
-
-  .card .details h2{
    margin: 0;
    padding: 0;
-   font-weight: 600;
-   font-size: 20px;
-   color: #777;
-   text-transform: uppercase;
+   display: flex;
+   justify-content:center;
+   align-items: center;
+   min-height: 80vh;
+  background: #b3a892;
   }
+  .box{
+    margin: calc(var(--base-grid)*2) auto calc(var(--base-grid)*5);
+    display: grid;
+    grid-row-gap: calc(var(--base-grid)*8);
+    grid-column-gap: calc(var(--base-grid)*6);
+    grid-template-columns: repeat(auto-fit,minmax(calc(var(--base-grid)*35),1fr));
+    justify-items: center;
+  }
+  .polaroid a {
+        background: #ffffff;
+        display: inline-block;
+        margin: 55px 75px 30px;
+        padding: 15px 15px 30px;
+        text-align: center;
+        text-decoration: none;
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+        -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
+        -webkit-transition: all .20s linear;
+        -moz-transition: all .20s linear;
+        transition: all .20s linear;
+        z-index: 10;
+        position: relative;
+      }
+      .polaroid a:after {
+        color: #333;
+        font-size: 25px;
+        content: attr(title);
+        position: relative;
+        top: 15px;
+      }
+      .polaroid img {
+        display: block;
+        width: 350px;
+        height: auto;
+      }
+      .polaroid a:hover {
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        transform: scale(1.02);
+        z-index: 0;
+        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+        -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+      } */
 
-  .card .details h2 span{
-  font-weight: 500;
-  font-size: 16px;
-  color: #f38695;
+/* New Section ( This part of code is copied from the web ) */
+:root {
+  --base-grid: 10px;
+  --colour-body-background: #a68c63;
+  --colour-background: #fff;
+  --colour-background-folded: #f5f5f5;
+  --colour-background-stripes: rgba(255,255,255,.5);
+  --colour-text: #1a1a1a;
+}
+.newSection, :after, :before {
+  box-sizing: border-box;
+  margin: 0;
+}
+.newSection {
+  background: var(--colour-body-background);
+  font-family: Bitter;
+  padding: calc(var(--base-grid)*10);
+}
+.articles {
+  margin: calc(var(--base-grid)*2) auto calc(var(--base-grid)*5);
+  display: grid;
+  grid-row-gap: calc(var(--base-grid)*8);
+  grid-column-gap: calc(var(--base-grid)*6);
+  grid-template-columns: repeat(auto-fit,minmax(calc(var(--base-grid)*35),1fr));
+  justify-items: center;
+}
+.articles__article {
+  cursor: pointer;
   display: block;
-  margin-top: 5px;
-   } 
+  position: relative;
+  perspective: 1000px;
+  animation-name: animateIn;
+  animation-duration: .35s;
+  animation-delay: calc(var(--animation-order)*100ms);
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.articles__article:before {
+  content: "";
+  position: absolute;
+  top: calc(var(--base-grid)*-2);
+  left: calc(var(--base-grid)*-2);
+  border: 2px dashed var(--colour-background);
+  background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px,var(--colour-background-stripes) 0, var(--colour-background-stripes) 5px);
+  z-index: -1;
+}
+.articles__article,
+.articles__article:before {
+  width: calc(var(--base-grid)*35);
+  height: calc(var(--base-grid)*35);
+}
+.articles__link {
+  background-color: var(--colour-body-background);
+  border: 2px solid var(--colour-background);
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.articles__link:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: calc(var(--base-grid)*3);
+  width: calc(var(--base-grid)*2);
+  height: calc(var(--base-grid)*2);
+  margin-top: calc(var(--base-grid)*-1);
+  clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
+  -webkit-clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
+  background-color: var(--colour-background);
+  opacity: 0;
+  transition: opacity .5s ease-in,transform .3s ease-in-out 0ms;
+}
+.articles__content {
+  background-color: var(--colour-background);
+  color: var(--colour-text);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: calc(var(--base-grid)*2);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--colour-background);
+}
+.articles__content--lhs {
+  clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
+  -webkit-clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
+}
+.articles__content--rhs {
+  clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
+  -webkit-clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
+  transition: transform .5s ease-in-out,background-color .4s ease-in-out;
+}
+.articles__title {
+  font-size: 29px;
+}
+.articles__content p {
+  font-size: 20px;
+  padding-top: 8px;
+}
+.articles__footer {
+  margin-top: auto;
+  font-size: 10px;
+  line-height: 20px;
+  display: flex;
+  color: #a68c63;
+}
+.articles__link:hover .articles__content--rhs {
+  background-color: var(--colour-background-folded);
+  transform: rotateY(-50deg);
+}
+.articles__link:hover:after {
+  opacity: 1;
+  transform: translateX(calc(var(--base-grid)*1.5));
+  transition: opacity .5s ease-in,transform .3s ease-in-out .25s;
+}
 
 /* Contact us شغل هنا*/
 @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -312,12 +411,9 @@ nav ul{
   margin: 0; /*خطوط العرض */
   padding: 0; /*االمساحة لجميع العناصر الافتراضية صفر */
 }
-#contactSection{
-  background: url('https://i.pinimg.com/474x/25/f8/79/25f8796fd079fc9ce9ac21d0867e5fb2.jpg');
-  background-blend-mode: overlay;
-}
+
 .container{/*contact us تفاصيل العرض والحجم والون */
-   max-width: 800px;
+  max-width: 800px;
   height: 600px;
   background: #fff;
   margin: 50px auto;
@@ -380,4 +476,26 @@ nav ul{
 
 ::-webkit-input-placeholder{ /* يتحكم بمقاس النص في البوكس*/
   font-family: "Roboto",sans-serif;
+}
+
+/* footer */
+footer{
+  text-align: center;
+  padding:  0px 50px;
+  background-color: #6d765c;
+  color: white;
+  padding-top: 45px;
+}
+/* Social Media IconS */
+.socialMediaIcon{
+  padding-top: 20px;
+  font-size: 20px;
+  letter-spacing: 6px;
+}
+.socialMediaIcon i {
+  cursor: pointer;
+}
+#©{
+  font-size: 10px;
+  padding: 10px;
 }

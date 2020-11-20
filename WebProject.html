@@ -19,6 +19,12 @@
 <body>
   <div id="slideoutMenu"> <!--Slideout Menu (Phone Navigation)-->
     <ul>
+      <li> <!--Sign in-->
+        <div id="signIn" href="#">
+            <i class="fas fa-user"> </i> <!--Sign in Icon-->
+          <a> Sign up </a>
+        </div>
+      </li>
       <li>
         <a href="#"> Indoor Plant </a>
       </li>
@@ -40,7 +46,7 @@
   <nav>
     <div id=logoImg> <!--logo-->
       <a href="#"> <!--home page link-->
-        <img src="WebProject/logo.jpeg" alt="LivingLeaves Logo">
+        <img src="WebProject/singleLogo.jpeg" alt="LivingLeaves Logo">
       </a>
     </div>
     <div id="menuIcon"> <!--Menu Icon-->
@@ -56,16 +62,23 @@
       <li>
         <a href="#"> Blog </a>
       </li>
-      <li>
+      <li id="contactUs" >
         <a href="#C"> Contact us </a>
       </li>
+      <li> <!--Sign in-->
+        <div id="signIn" href="#">
+            <i class="fas fa-user"> </i> <!--Sign in Icon-->
+          <a> Sign up </a>
+        </div>
+      </li>
       <li> <!--Search, just the icon-->
-        <div id="searchIcon"> <!--Search Icon-->
-          <i class="fas fa-search"> </i>
+        <div id="searchIcon">
+          <i class="fas fa-search"> </i> <!--Search Icon-->
         </div>
       </li>
     </ul>
   </nav>
+
   <div id="searchBox"> <!--Search Box-->
     <input type="text" placeholder="Search Here">
   </div>
@@ -78,30 +91,63 @@
   </div>
 
   <main>
-    <section class="plantsCards"> <!--indoor and outdoor plants cards-->
-      <div class="box">
-          <div class="card" herf="#">
-            <div class="imgBx">
-                <img src="https://i.pinimg.com/564x/cf/51/d2/cf51d24bae63a9eb4548e80fbff641b6.jpg" alt="images">
-            </div>
-            <div class="details">
-                <h2> INDOOR PLANTS <br><span> click to show </span></h2>
-            </div>
-          </div>
 
-           <div class="card" herf="#" >
-             <div class="imgBx">
-                <img src="https://i.pinimg.com/564x/a3/09/2b/a3092b923de19bb8b3d9b1ae070eacfc.jpg" alt="images">
-             </div>
-             <div class="details">
-                <h2> OUTDOOR PLANTS <br><span> click to show </span></h2>
-              </div>
-           </div>
+    <!--Indoor and Outdoor plants cards
+    <section class="plantsCards">
+      <div class="box">
+
+        <div class="polaroid">
+          <a href="#" title="INDOOR PLANTS">
+            <img height="250" src="https://i.pinimg.com/564x/04/d0/00/04d000a92a04663af3f57155a2dc5108.jpg"/> </a>
+          </div>
+        <div class="polaroid">
+          <a href="#" title="OUTDOOR PLANTS">
+            <img height="250" src="https://i.pinimg.com/564x/ec/7e/18/ec7e185e5b842c899ce548cf8fa81f4d.jpg"/> </a>
+        </div>
 
       </div>
-    </section>
+    </section> -->
 
-    <section> <!--Bloge-->
+    <!-- New Section -->
+    <section class="newSection">
+      <ol class="articles">
+        <li class="articles__article" style="--animation-order:1"><a class="articles__link">
+          <div class="articles__content articles__content--lhs">
+            <h4 class="articles__title">Indoor Plants Benefits</h4>
+            <p> Indoor plants (Houseplant) have positive psychological effects and help with indoor air purification, since some species, and the soil-dwelling microbes associated with them, reduce indoor air pollution by absorbing volatile organic compounds! </p>
+            <div class="articles__footer">
+              <p>Click to now how to take care of it </p>
+            </div>
+          </div>
+          <div class="articles__content articles__content--rhs" aria-hidden="true">
+            <h4 class="articles__title">Indoor Plants Benefits</h4>
+            <p> Indoor plants (Houseplant) have positive psychological effects and help with indoor air purification, since some species, and the soil-dwelling microbes associated with them, reduce indoor air pollution by absorbing volatile organic compounds! </p>
+            <div class="articles__footer">
+              <p>Click to now how to take care of it</p>
+            </div>
+          </div></a></li>
+          <li class="articles__article" style="--animation-order:2"><a class="articles__link">
+            <div class="articles__content articles__content--lhs">
+              <h4 class="articles__title">Outdoor Plants Benefits</h4>
+              <p> Physical: Boosts Air Quality, Promotes Exercise, Encourages Healthy Eating and Decreases Risk of Illness. </p>
+              <p>  Mental: Improves Mood, Relieves Stress and Anxiety, Prolongs Attention Span and Boosts Self-Esteem. </p>
+              <div class="articles__footer">
+                <p>Click to now how to take care of it</p>
+              </div>
+            </div>
+            <div class="articles__content articles__content--rhs" aria-hidden="true">
+              <h4 class="articles__title">Outdoor Plants Benefits</h4>
+              <p> Physical: Boosts Air Quality, Promotes Exercise, Encourages Healthy Eating and Decreases Risk of Illness. </p>
+              <p>  Mental: Improves Mood, Relieves Stress and Anxiety, Prolongs Attention Span and Boosts Self-Esteem. </p>
+              <div class="articles__footer">
+                <p>Click to now how to take care of it</p>
+              </div>
+            </div></a></li>
+          </ol>
+        </section>
+
+    <!--Bloge-->
+    <section>
 
     </section>
 
@@ -129,12 +175,16 @@
       </div>
     </section>
 
-    <footer> <!--تذييل الصفحة-->
-
-      <div> <!--أقتباس عن النباتات-->
-
+    <!--تذييل الصفحة-->
+    <footer>
+      <p> "I grow plants for many reasons: to please my eye or to please my soul, to challenge the elements or to challenge my patience, for novelty or for nostalgia, but mostly for the joy in seeing them grow" </p>
+      <p> – David Hobson </p>
+      <div class="socialMediaIcon">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
       </div>
-
+      <p id="©"> © 2020 Living Leaves </p>
     </footer>
 
   </main>
