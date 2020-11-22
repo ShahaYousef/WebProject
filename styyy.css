@@ -1,0 +1,66 @@
+.slider-title{
+  text-align: center;
+  font-style:oblique;
+  font-size:50px;
+
+
+}
+/* for read more */
+.readmore{
+  text-decoration:none;
+  color:#b8860b;
+  border: 1px solid  #b8860b;
+  padding:3px;
+  font-size:14px;
+  border-radius:10px;
+}
+.readmore:hover{
+  color: white;  /* red color*/
+  border: 1px solid  #daa520  ;/* for change also the border same color*/
+  background: #daa520;
+}
+.paragraph{
+  font-size: 14px;
+  text-align:center;
+
+}
+
+.post-slider{
+ position: relative;/* الإزاحه من بداية الصفحة نفسها*/
+
+}
+/* تنسيق الكارد ككل  */
+.post-slider .post-wrapper{
+ width:100%;/*for showingهنا قدرت اطلع البوست الرابع */
+ height:390px;
+
+ margin:0px auto;
+ overflow:hidden;
+ padding:10px 0px 10px  50px;/*top right bottom left*/
+
+}
+
+.post-slider .post-wrapper .post{
+ width:290px;
+ height:330px;
+ margin:0px 10px;
+ display:inline-block;
+ background:  white;
+ text-align: center;
+ border-radius:5px;
+ box-shadow:2rem 2rem 1rem -1rem #a0a0a033;
+}
+
+.post-slider .post-wrapper .post .post-info{
+  height: 130px;
+
+}
+/* for slider image*/
+.post-slider .post-wrapper .post .slider-image{
+ width:100%;
+ height:200px;
+ border-top-left-radius:10px;
+ border-top-right-radius:10px;
+
+
+}
