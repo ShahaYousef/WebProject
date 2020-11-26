@@ -47,11 +47,15 @@ input:focus, textarea:focus{ /*عشان ألغي الحواف السوداء ع�
  #banner h1{
    padding: 0 30px;
    font-size: 40px;
+   text-shadow: 0.5px 0.5px 1px Black;
+   font-weight: lighter;
  }
  #banner h3{
    padding: 0 24px;
    padding-right: 150px;
    font-size: 32px;
+   text-shadow: 0.5px 0.5px 1px Black;
+   font-weight: lighter;
  }
  #banner .header{
    /* border-radius: 8px; */
@@ -515,6 +519,7 @@ color: #f5f5f5;
 font-size: 25px;
 padding-top: 65px;
 letter-spacing: 4px;
+text-shadow: 0.5px 0.5px 1px Black;
 }
 .plantsGallery{
   padding: 20vh 10vh;
@@ -593,9 +598,15 @@ div.desc P {
   background: white;
   padding-bottom: 300px;
   font-size: 23px;
+  border-left: 0.5px solid #DCDCDC;
+  border-right: 0.5px solid #DCDCDC;
+}
+.tobicContent img {
+  padding: 40px 0;
+  width: 100%;
 }
 /* Small Page Settings */
-@media screen and ( max-width: 1250px ) {
+@media screen and ( max-width: 1250px ){
   .tobicContent {
     margin: 0 80px;
     padding: 0 30px;
@@ -607,7 +618,7 @@ div.desc P {
   }
 }
 /* Phone Page Settings */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
   .tobicContent {
     margin: 0;
     padding: 0 40px;
@@ -619,9 +630,53 @@ div.desc P {
     height: 28vh;
   }
   .tobic h1{
-    font-size: 35px;
+    font-size: 37px;
     padding: 30px;
     text-align: center;
-    font-size: 37px;
+  }
+}
+
+/* Plant Pages */
+.banner3{
+  height: 30vh;
+  background:  #f5f5f5;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.title2{
+  color: black;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding-top: 65px;
+}
+.title2 h1{
+  font-size: 50px;
+  text-shadow: 0.5px 0.5px 1px black;
+  font-weight: lighter;
+ }
+/* Small Page Settings */
+@media screen and ( max-width: 1250px ){
+  .title2{
+    font-size: 45px;
+  }
+  .tobicContent img {
+    padding: 30px 0;
+  }
+}
+/* Phone Page Settings */
+@media screen and (max-width: 600px){
+  .banner3{
+    height: 28vh;
+  }
+  .title2{
+    font-size: 40px;
+  }
+  .tobicContent img {
+    padding-top: 0;
   }
 }
