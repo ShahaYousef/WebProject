@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+header("Location: HomePage.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $name = $_POST["urnamr"];
@@ -26,5 +26,11 @@ $query = "INSERT INTO userinfo (urnamr, uremail, password ) VALUES ('$name', '$e
 mysqli_query($con , $query );
 
 
+if (isset($_POST['Login'])){
 
+if (($name == "Rawan" )&&($password == "123455"))
+header("Location: HomePage.php");
+else
+header("Location: register.html");
+}
 ?>

@@ -15,7 +15,7 @@ a{ /* Navigation تنسيقات للـ */
 
 a:hover{ /* Phone Navigation تنسيقات للـ */
   text-decoration: none;
-  color: green;
+  color: darkgreen;
 }
 
 /* Inputs */
@@ -58,7 +58,6 @@ input:focus, textarea:focus{ /*عشان ألغي الحواف السوداء ع�
    font-weight: lighter;
  }
  #banner .header{
-   /* border-radius: 8px; */
    background: RGB(0, 0, 0, 0.3);
    padding: 30px;
  }
@@ -99,7 +98,7 @@ nav a{
 }
 nav a:hover{
   text-decoration: none;
-  color: green; /*لون النص اللي يطلع لما يمرر المستخدم الماوس*/
+  color: darkgreen; /*لون النص اللي يطلع لما يمرر المستخدم الماوس*/
 }
 nav ul{
   display: flex;
@@ -109,29 +108,32 @@ nav ul{
   height: 100%;
   margin: 0;
 }
-/* هينا الكود أنه الناف الحالية تكون اكتيف */
+.active{
+  color: darkgreen;
+}
 #logoImg{
   display: flex;
   height: 100%;
   padding: 0 32px;
   align-items: center;
-  /* color: white; */
   transition: .4s;
 }
 #logoImg img{ /* حجم الصورة */
   height: 75px;
 }
-#logoImg img{ /*إذا كانت خلفية اللوقو شفافة; ممكن أغير لونها إذا ممر المستخدم الماوس */
+#logoImg img{
   background: white;
 }
-#menuIcon { /* Menu Icon */
+/* Menu Icon */
+#menuIcon {
   height: 100%;
   font-size: 25px; /* حجم الأيكون */
   padding: 0 4px;
-  display: none;/* لإخفاء المنيو أيكون في طريقة عرض المتصفح */
+  display: none; /*لإخفاء المنيو أيكون في الشاشة الكبيرة*/
   align-items: center;
 }
-#searchIcon { /* Search Icon */
+/* Search Icon */
+#searchIcon {
   color: black;
   padding: 0 32px;
   padding-left: 0;
@@ -139,7 +141,7 @@ nav ul{
   transition: 0.4s;
 }
 #searchIcon:hover {
-  color: green; /* اللون اللي يطلع لما يمرر المستخدم الماوس على السيرتش ايكون */
+  color: darkgreen;
 }
 
  /* Sign in */
@@ -148,7 +150,7 @@ nav ul{
   cursor: pointer;
 }
 #signIn:hover{
-  color: green;
+  color: darkgreen;
 }
 /* Sign in Icon */
 #signIn i{
@@ -169,7 +171,7 @@ font-size: 20px;
   transition: 0.4s;
   margin-top: 72px;
   width: 100%;
-  text-align: center; /* مكان النص */
+  text-align: center;
   opacity: 0;
   pointer-events: none;
 }
@@ -180,22 +182,22 @@ font-size: 20px;
 #slideoutMenu ul li{
   padding: 8px;
 }
-#slideoutMenu a{ /* أعدادات النص */
+#slideoutMenu a{
   font-size: 20px;
 }
 #slideoutMenu input{
   width: 100%;
   padding: 5px;
   font-size: 20px;
-  text-align: center; /* مكان النص */
+  text-align: center;
 }
 
 /* Small Page Settings */
 @media screen and ( max-width: 1290px ) {
  nav ul {
-  display: none; /* لإخفاء النافقيشن منيو */
+  display: none;
  }
-  #menuIcon{ /* لإظهار المنيو ايكون */
+  #menuIcon{
     display: flex;
     cursor: pointer;
   }
@@ -232,188 +234,110 @@ font-size: 20px;
   }
 }
 
-/* Indoor and Outdoor plants cards
- .plantsCards{
-   margin: 0;
-   padding: 0;
-   display: flex;
-   justify-content:center;
-   align-items: center;
-   min-height: 80vh;
-  background: #b3a892;
-  }
-  .box{
-    margin: calc(var(--base-grid)*2) auto calc(var(--base-grid)*5);
-    display: grid;
-    grid-row-gap: calc(var(--base-grid)*8);
-    grid-column-gap: calc(var(--base-grid)*6);
-    grid-template-columns: repeat(auto-fit,minmax(calc(var(--base-grid)*35),1fr));
-    justify-items: center;
-  }
-  .polaroid a {
-        background: #ffffff;
-        display: inline-block;
-        margin: 55px 75px 30px;
-        padding: 15px 15px 30px;
-        text-align: center;
-        text-decoration: none;
-        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
-        -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
-        box-shadow: 0 4px 6px rgba(0, 0, 0, .2);
-        -webkit-transition: all .20s linear;
-        -moz-transition: all .20s linear;
-        transition: all .20s linear;
-        z-index: 10;
-        position: relative;
-      }
-      .polaroid a:after {
-        color: #333;
-        font-size: 25px;
-        content: attr(title);
-        position: relative;
-        top: 15px;
-      }
-      .polaroid img {
-        display: block;
-        width: 350px;
-        height: auto;
-      }
-      .polaroid a:hover {
-        -webkit-transform: scale(1.02);
-        -moz-transform: scale(1.02);
-        transform: scale(1.02);
-        z-index: 0;
-        -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-        -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
-      } */
+ /*Bolg Section ( Razan )*/
+   .slider-title{
+   text-transform: uppercase;
+   text-align: center;
+   letter-spacing: 1px;
+   font-size: 45px;
+   margin-bottom: 20px;
 
-/*This code is copied from the web, Start */
-:root {
-  --base-grid: 10px;
-  --colour-body-background: #a68c63;
-  --colour-background: #fff;
-  --colour-background-folded: #f5f5f5;
-  --colour-background-stripes: rgba(255,255,255,.5);
-  --colour-text: #1a1a1a;
-}
-.newSection, :after, :before {
-  box-sizing: border-box;
-  margin: 0;
-}
-.newSection {
-  background: var(--colour-body-background);
-  font-family: Bitter;
-  padding: calc(var(--base-grid)*10);
-}
-.articles {
-  margin: calc(var(--base-grid)*2) auto calc(var(--base-grid)*5);
-  display: grid;
-  grid-row-gap: calc(var(--base-grid)*8);
-  grid-column-gap: calc(var(--base-grid)*6);
-  grid-template-columns: repeat(auto-fit,minmax(calc(var(--base-grid)*35),1fr));
-  justify-items: center;
-}
-.articles__article {
-  cursor: pointer;
-  display: block;
-  position: relative;
-  perspective: 1000px;
-  animation-name: animateIn;
-  animation-duration: .35s;
-  animation-delay: calc(var(--animation-order)*100ms);
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-}
-.articles__article:before {
-  content: "";
-  position: absolute;
-  top: calc(var(--base-grid)*-2);
-  left: calc(var(--base-grid)*-2);
-  border: 2px dashed var(--colour-background);
-  background-image: repeating-linear-gradient(-24deg,transparent,transparent 4px,var(--colour-background-stripes) 0, var(--colour-background-stripes) 5px);
-  z-index: -1;
-}
-.articles__article,
-.articles__article:before {
-  width: calc(var(--base-grid)*35);
-  height: calc(var(--base-grid)*35);
-}
-.articles__link {
-  background-color: var(--colour-body-background);
-  border: 2px solid var(--colour-background);
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.articles__link:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: calc(var(--base-grid)*3);
-  width: calc(var(--base-grid)*2);
-  height: calc(var(--base-grid)*2);
-  margin-top: calc(var(--base-grid)*-1);
-  clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
-  -webkit-clip-path: polygon(75% 0,100% 50%,75% 100%,0 100%,25% 50%,0 0);
-  background-color: var(--colour-background);
-  opacity: 0;
-  transition: opacity .5s ease-in,transform .3s ease-in-out 0ms;
-}
-.articles__content {
-  background-color: var(--colour-background);
-  color: var(--colour-text);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: calc(var(--base-grid)*2);
-  display: flex;
-  flex-direction: column;
-  border: 2px solid var(--colour-background);
-}
-.articles__content--lhs {
-  clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
-  -webkit-clip-path: polygon(0 0,51% 0,51% 100%,0 100%);
-}
-.articles__content--rhs {
-  clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
-  -webkit-clip-path: polygon(50% 0,100% 0,100% 100%,50% 100%);
-  transition: transform .5s ease-in-out,background-color .4s ease-in-out;
-}
-.articles__title {
-  font-size: 29px;
-}
-.articles__content p {
-  font-size: 20px;
-  padding-top: 8px;
-}
-.articles__footer {
-  margin-top: auto;
-  font-size: 10px;
-  line-height: 20px;
-  display: flex;
-  color: #a68c63;
-}
-.articles__link:hover .articles__content--rhs {
-  background-color: var(--colour-background-folded);
-  transform: rotateY(-50deg);
-}
-.articles__link:hover:after {
-  opacity: 1;
-  transform: translateX(calc(var(--base-grid)*1.5));
-  transition: opacity .5s ease-in,transform .3s ease-in-out .25s;
-}
-/* End */
+   padding-top: 50px;
+ }
+ /* for read more */
+ .readmore{
+   text-decoration:none;
+   color:#daa520;
+   border: 1px solid #daa520;
 
-/* Contact section */
+   padding:2px;
+   font-size:12px;
+   border-radius:10px;
+ }
+ .readmore:hover{
+   color: white;
+   border: 1px solid  #daa520 ;/* for change also the border same color*/
+   background: #daa520;
+ }
+ .paragraph{
+   font-size: 14px;
+   text-align:center;
+
+ }
+
+ .post-slider{
+  position:relative;/* الإزاحه من بداية الصفحة نفسها*/
+
+ }
+
+ @media screen and ( max-width: 1290px ) {
+   .post-slider{
+     margin: 0 80px;
+     padding: 0 30px;
+     padding-bottom: 200px;
+   }
+ }
+ @media screen and (max-width: 600px) {
+   .post-slider{
+     margin: 0 ;
+     padding: 0 20px;
+     padding-bottom: 200px;
+   }
+   }
+
+
+ /* تنسيق الكارد ككل  */
+ .post-slider .post-wrapper{
+
+  width:100% auto;/*for showingهنا قدرت اطلع البوست الرابع */
+  height:100% auto;
+  margin-top:15px;
+  overflow:hidden;
+  padding:10px 0px 10px  75px;/top right bottom left/
+
+
+ }
+ .post-wrapper {
+ height: auto;
+
+ flex-direction: row;
+ justify-content: space-around;
+ }
+
+ .post-slider .post-wrapper .post{
+
+  width:290px  ;
+  height:330px;
+  margin:0px 10px 20px 0px;/*spaces between posts */
+  display:inline-block;
+  background:  white;
+  text-align: center;
+  border-radius:5px;
+  box-shadow:2rem 2rem 1rem -1.9rem #a0a0a033;
+
+ }
+
+ .post-slider .post-wrapper .post .post-info{
+   height: 130px;
+
+ }
+ /* for slider image*/
+ .post-slider .post-wrapper .post .slider-image{
+  width:100%;
+  height:200px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+
+
+ }
+
+/* Contact Section ( Hana ) */
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
   margin: 0; /*خطوط العرض */
   padding: 0; /*االمساحة لجميع العناصر الافتراضية صفر */
 }
-.container{/*contact us تفاصيل العرض والحجم والون */
+.container{ /*contact us تفاصيل العرض والحجم والون */
   max-width: 800px;
   height: 600px;
   background: #fff;
@@ -476,7 +400,7 @@ font-size: 20px;
   }
 }
 
-/* footer */
+/* Footer */
 footer{
   text-align: center;
   padding:  0px 50px;
@@ -558,7 +482,6 @@ div.desc P {
 @media only screen and (max-width: 1290px) {
   .responsive {
     width: 49.99999%;
-    /* margin: 6px 0; */
   }
   .plantsGallery{
     padding: 10vh 10vh;
@@ -639,7 +562,7 @@ div.desc P {
 /* Plant Pages */
 .banner3{
   height: 30vh;
-  background:  #f5f5f5;
+  background: #f5f5f5;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
@@ -661,9 +584,9 @@ div.desc P {
  }
 /* Small Page Settings */
 @media screen and ( max-width: 1250px ){
-  .title2{
+  .title2 h1{
     font-size: 45px;
-  }
+   }
   .tobicContent img {
     padding: 30px 0;
   }
@@ -674,8 +597,12 @@ div.desc P {
     height: 28vh;
   }
   .title2{
-    font-size: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
+  .title2 h1{
+    font-size: 40px;
+   }
   .tobicContent img {
     padding-top: 0;
   }

@@ -1,0 +1,166 @@
+<?php
+session_start();
+ ?>
+ 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make the website responsive-->
+  <mata http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Connect CSS Style-->
+  <link rel="stylesheet" href="style.css">
+  <!--For GoogleFont-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <!--for Icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+  <title>Mae</title>
+</head>
+
+<body>
+  <div id="slideoutMenu"> <!--Slideout Menu (Phone Navigation)-->
+    <ul>
+      <li> <!--Sign in-->
+        <div id="signIn" >
+            <i class="fas fa-user"> </i> <!--Sign in Icon-->
+          <a> <?php echo ($_SESSION["urnamr"]); ?></a>
+        </div>
+      </li>
+      <li>
+        <a href="indoorPlants.php"> Indoor Plants </a>
+      </li>
+      <li>
+        <a href="outdoorPlants.php" class="active"> Outdoor Plants </a>
+      </li>
+      <li>
+        <a href="HomePage.php#Blog"> Blog </a>
+      </li>
+      <li>
+        <a href="HomePage.php#C"> Contact us </a>
+      </li>
+      <li> <!--Search-->
+        <input type="text" placeholder="Search Here " name="Search" class="searchInput">
+      </li>
+    </ul>
+  </div>
+
+  <nav>
+    <div id=logoImg> <!--logo-->
+      <a href="HomePage.php"> <!--home page link-->
+        <img src="WebProject/singleLogo.jpeg" alt="LivingLeaves Logo">
+      </a>
+    </div>
+    <div id="menuIcon"> <!--Menu Icon-->
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul> <!--Navigation Menu-->
+      <li>
+        <a href="indoorPlants.php"> Indoor Plants </a>
+      </li>
+      <li>
+        <a href="outdoorPlants.php" class="active"> Outdoor Plants </a>
+      </li>
+      <li>
+        <a href="HomePage.php#Blog"> Blog </a>
+      </li>
+      <li id="contactUs" >
+        <a href="HomePage.php#C"> Contact us </a>
+      </li>
+      <li> <!--Sign in-->
+        <div id="signIn" href="#">
+            <i class="fas fa-user"> </i> <!--Sign in Icon-->
+          <a> <?php echo ($_SESSION["urnamr"]); ?> </a>
+        </div>
+      </li>
+      <li> <!--Search, just the icon-->
+        <div id="searchIcon">
+          <i class="fas fa-search"> </i> <!--Search Icon-->
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="searchBox"> <!--Search Box-->
+    <input type="text" placeholder="Search Here" class="searchInput">
+  </div>
+
+  <main>
+
+    <div class="banner3">
+      <div class="title2">
+        <h1>Mae</h1>
+      </div>
+    </div>
+
+    <section class="tobic">
+      <div class="tobicContent">
+
+        <!-- صورة حلوة وجودتها زينه للنبته -->
+        <img src="https://static.homesandproperty.co.uk/s3fs-public/thumbnails/image/2018/06/28/11/patch-london-mae.jpg" alt="Plant pic">
+
+        <!-- content -->
+      <p>Mae is a plant that looks tropical but is perfectly ok with non-tropical conditions.
+			It’s one of only two palms native to Europe and copes happily with British weather.
+			Cold temperatures, wind and drought won’t phase it.
+			</p>
+      <p>In the wild, it grows mainly in southwestern Europe, in places like Spain and Portugal,
+			but also in North Africa. It’s quite a slow grower, but in the wild it can reach heights of up to 5m, with its fan-like leaves growing as long as 1.5m. It won’t reach those heights in a pot and will only grow a few centimetres per year,
+			so don’t worry about it taking over your balcony or patio.
+			</p>
+
+        <!-- Icons -->
+        <div class="plantIcons">
+          <pre>
+          </pre>
+
+          <!-- Part1 -->
+          <h4> <i style="color: #FFBD2E; font-size: 25px" class="fas fa-sun"></i> Light </h4>
+          <p > She likes a mix of sun and shade throughout the day. Ideally a bit more sun than shade.  </p>
+          <pre>
+          </pre>
+
+          <!-- Part2 -->
+          <h4> <i style="color: #1167b1; font-size: 25px" class="fas fa-tint"></i> Water </h4>
+          <p> Like most palms, she’s used to fairly dry conditions. Give her a drink only when the top two inches of soil feel dry. </p>
+          <pre>
+          </pre>
+
+        </div>
+        <!-- End of Icons -->
+
+        <!-- content -->
+        <p>It’s incredibly easy to care for. It likes a spot that gets some sun, but is fine with shade for part of the day.
+  			It’s very drought tolerant so just give it a water occasionally, when you notice the top two inches of soil are dry.
+  			Your plant will arrive in a nursery pot (the plastic pot it’s been growing in).
+  			There’s no need to remove it from this. Just place the whole thing inside a decorative pot.</p>
+
+
+        <!-- Sources المصادر -->
+         <div>
+           <p style="display: inline-block;" > Source: </p>
+           <a  style="display: inline-block; text-decoration: underline;"  href="https://www.patchplants.com/gb/en/plants/chamaerops-humilis-69/"> PATCH PLANTS </a>
+         </div>
+        </div>
+
+    </section>
+
+  </main>
+
+  <!-- تذييل الصفحة -->
+  <footer>
+        <p> "Gardening adds years to your life and life to your years" </p>
+    <div class="socialMediaIcon">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+    <p id="©"> © 2020 Living Leaves </p>
+  </footer>
+
+  <script src="mainJS.js"> </script>
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<?php
+session_start();
+ ?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make the website responsive-->
+  <mata http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Connect CSS Style-->
+  <link rel="stylesheet" href="style.css">
+  <!--For GoogleFont-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <!--for Icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+  <title>Croton Plant</title>
+</head>
+
+<body>
+  <div id="slideoutMenu"> <!--Slideout Menu (Phone Navigation)-->
+    <ul>
+      <li> <!--Sign in-->
+        <div id="signIn">
+            <i class="fas fa-user"> </i> <!--Sign in Icon-->
+          <a> <?php echo ($_SESSION["urnamr"]); ?> </a>
+        </div>
+      </li>
+      <li>
+        <a href="indoorPlants.php" class="active" > Indoor Plants </a>
+      </li>
+      <li>
+        <a href="outdoorPlants.php"> Outdoor Plants </a>
+      </li>
+      <li>
+        <a href="HomePage.php#Blog"> Blog </a>
+      </li>
+      <li>
+        <a href="HomePage.php#C"> Contact us </a>
+      </li>
+      <li> <!--Search-->
+        <input type="text" placeholder="Search Here " name="Search" class="searchInput">
+      </li>
+    </ul>
+  </div>
+
+  <nav>
+    <div id=logoImg> <!--logo-->
+      <a href="HomePage.php"> <!--home page link-->
+        <img src="WebProject/singleLogo.jpeg" alt="LivingLeaves Logo">
+      </a>
+    </div>
+    <div id="menuIcon"> <!--Menu Icon-->
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul> <!--Navigation Menu-->
+      <li>
+        <a href="indoorPlants.php" class="active" > Indoor Plants </a>
+      </li>
+      <li>
+        <a href="outdoorPlants.php"> Outdoor Plants </a>
+      </li>
+      <li>
+        <a href="HomePage.php#Blog"> Blog </a>
+      </li>
+      <li id="contactUs" >
+        <a href="HomePage.php#C"> Contact us </a>
+      </li>
+      <li> <!--Sign in-->
+        <div id="signIn">
+            <i class="fas fa-user"> </i> <!--Sign in Icon-->
+          <a> <?php echo ($_SESSION["urnamr"]); ?> </a>
+        </div>
+      </li>
+      <li> <!--Search, just the icon-->
+        <div id="searchIcon">
+          <i class="fas fa-search"> </i> <!--Search Icon-->
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="searchBox"> <!--Search Box-->
+    <input type="text" placeholder="Search Here" class="searchInput">
+  </div>
+
+  <main>
+
+    <div class="banner3">
+      <div class="title2">
+        <h1>Croton Plant</h1>
+      </div>
+    </div>
+
+    <section class="tobic">
+      <div class="tobicContent">
+
+        <!-- صورة حلوة وجودتها زينه للنبته -->
+        <img src="https://cdn.shopify.com/s/files/1/0059/8835/2052/products/Croton_Petra_1_FGT_1024x1024.jpg?v=1605225669" alt=" Croton Plant">
+
+        <!-- content -->
+        <p>Crotons were originally an outdoor decorative plant and have only become a popular indoor houseplant
+          within the last 15-20 years. They have beautiful multicolored, hard, leathery leaves in red, yellow,
+          green, orange, and black. The leaf shapes on a Croton Plant can be long, narrow, wide, or elliptical.
+           Individual leaves and entire Croton plant branches can be used in flower arrangements.
+             </p>
+        <p> The leaves easily root and can also be added to dish gardens. Croton plants are a little temperamental
+          and not as forgiving as some other houseplants, but are a bright addition to any home or office.
+       </p>
+
+        <!-- Icons -->
+        <div class="plantIcons">
+          <pre>
+          </pre>
+
+          <!-- Part1 -->
+          <h4> <i style="color: #FFBD2E; font-size: 25px" class="fas fa-sun"></i> Light </h4>
+          <p > Croton houseplants need bright light to maintain their colorful leaves. If there
+             is insufficient light, new leaves are green not predominantly yellow, red, or orange.
+              Too much direct sun causes phototoridation, a condition that makes Croton leaves gray and dull looking.</p>
+          <pre>
+          </pre>
+
+          <!-- Part2 -->
+          <h4> <i style="color: #1167b1; font-size: 25px" class="fas fa-tint"></i> Water </h4>
+          <p>Allow the top 25%-30% of the soil to dry out before watering. Crunchy leaves indicate
+            over-watering. Leaves become soft and droop when your plant needs water. When a croton is
+            severely over or under-watered leaves drop off.
+        </p>
+          <pre>
+          </pre>
+
+          <!-- Part3 -->
+          <h4> <i style="color: #6B8E23; font-size: 25px" class="fas fa-spray-can"></i> Humidity </h4>
+          <p> High humidity is a plus.</p>
+          <pre>
+          </pre>
+
+        </div>
+        <!-- End of Icons -->
+
+        <!-- content -->
+
+        <!-- Sources المصادر -->
+         <div>
+           <p style="display: inline-block;" > Source: </p>
+           <a  style="display: inline-block; text-decoration: underline;"  href="https://www.houseplant411.com/">House Plant</a>
+         </div>
+        </div>
+
+    </section>
+
+  </main>
+
+  <!-- تذييل الصفحة -->
+  <footer>
+    <p> "I grow plants for many reasons: to please my eye or to please my soul, to challenge the elements or to challenge my patience, for novelty or for nostalgia, but mostly for the joy in seeing them grow" </p>
+    <p> – David Hobson </p>
+    <div class="socialMediaIcon">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+    <p id="©"> © 2020 Living Leaves </p>
+  </footer>
+
+  <script src="mainJS.js"> </script>
+</body>
+
+</html>

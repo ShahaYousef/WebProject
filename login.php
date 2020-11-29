@@ -1,8 +1,11 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make the website responsive-->
+  <mata http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Connect CSS Style-->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,7 +17,7 @@
    background: url(https://i.pinimg.com/originals/f1/6a/36/f16a365a52f9b1cdcd19a529db533e1c.jpg);
    background-size: cover;
    background-position: center;
-   font-family: sans-serif;
+   font-family: 'Lora', serif;
   }
   .login-box{
    width: 350px;
@@ -87,9 +90,9 @@
    background: #39dc79;
    color: #000;
   }
-	/*
+  /*
     The Name of channel HTML WEBSITES and the link is
-		https://youtu.be/-RbkNcDwKbc
+    https://youtu.be/-RbkNcDwKbc
    */
     </style>
   <div class="login-box">
@@ -104,7 +107,7 @@
 
    <input type="submit"  name = "Login" value=" Login " ><br>
    <p>
-   	Not have account ? <a href="register.html"> Sing Up Now </a>
+     Not have account ? <a href="register.html"> Sing Up Now </a>
    </p>
 
   </div>

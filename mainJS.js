@@ -23,9 +23,3 @@ menuIcon.addEventListener('click', function(){
     slideoutMenu.style.pointerEvents = 'auto';
   }
 });
-
-$(document).ready(function(){ /*click mark in contact us*/
-         $(".btn").click(function(){
-               $(".input, .area").val("");
-            });
-         });
