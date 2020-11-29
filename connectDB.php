@@ -28,7 +28,7 @@ mysqli_query($con , $query );
 
 if (isset($_POST['Login'])){
 
-if (($name == "Rawan" )&&($password == "123455"))
+if (($name == "Shahd" )&&($password == "3636222"))
 header("Location: HomePage.php");
 else
 header("Location: register.html");
