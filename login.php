@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make the website responsive-->
-  <mata http-equiv="X-UA-Compatible" content="ie=edge">
-  <!--Connect CSS Style-->
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,7 +11,7 @@
       body{
    margin: 0;
    padding: 0;
-   background: url(https://i.pinimg.com/originals/f1/6a/36/f16a365a52f9b1cdcd19a529db533e1c.jpg);
+   background: url('https://images.squarespace-cdn.com/content/v1/580e572b29687f9f7c254951/1557345571131-L7LP9HQWVGWU8LQC4MHE/ke17ZwdGBToddI8pDm48kMXRibDYMhUiookWqwUxEZ97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0luUmcNM2NMBIHLdYyXL-Jww_XBra4mrrAHD6FMA3bNKOBm5vyMDUBjVQdcIrt03OQ/Living+Room+spring+refresh+6?format=1500w');
    background-size: cover;
    background-position: center;
    font-family: 'Lora', serif;

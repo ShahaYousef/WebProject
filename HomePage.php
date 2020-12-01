@@ -8,7 +8,7 @@ session_start();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--to make the website responsive-->
-  <mata http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Living Leaves</title>
   <!--Connect CSS Style-->
   <link rel="stylesheet" href="style.css">
   <!--For GoogleFont-->
@@ -17,14 +17,13 @@ session_start();
   <!--for Icons-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
-  <title>Living Leaves</title>
 </head>
 
 <body>
   <div id="slideoutMenu"> <!--Slideout Menu (Phone Navigation)-->
     <ul>
       <li> <!--Sign in-->
-        <div id="signIn" herf="login.php" >
+        <div class="signIn">
             <i class="fas fa-user"> </i> <!--Sign in Icon-->
           <a> <?php echo ($_SESSION["urnamr"]); ?> </a>
         </div>
@@ -70,7 +69,7 @@ session_start();
         <a href="#C"> Contact us </a>
       </li>
       <li> <!--Sign in-->
-        <div id="signIn" herf="login.php">
+        <div id="signIn">
             <i class="fas fa-user"> </i> <!--Sign in Icon-->
           <a> <?php echo ($_SESSION["urnamr"]); ?> </a>
         </div>
@@ -96,18 +95,14 @@ session_start();
 
   <main>
 
-
-
     <!--Blog-->
   <section id="Blog">
-    <!-- page wrapper-->
-    <div class="page-wrapper">
-      <!--------------------------------------->
-      <!--post slider-->
+
       <div class="post-slider">
         <p class="slider-title"> Blog </p>
         <div class="post-wrapper">
-          <div class="post"> <!--last pic-->
+
+          <div class="post">
             <img src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/1296x728_Air-Purifying_Plants-2-Dracaena.jpg?w=1155&h=1528"
              alt=""class="slider-image">
             <div class="post-info">
@@ -118,7 +113,8 @@ session_start();
                <a class="readmore" href="Post4-BestAriPurifying.php">Read more</a>
              </div>
            </div>
-           <div class="post"> <!-- second pic-->
+
+           <div class="post">
              <img src="https://i.pinimg.com/236x/10/bd/21/10bd2122a0987408181f8e47d966632f.jpg"
               alt=""class="slider-image">
               <div class="post-info">
@@ -129,7 +125,8 @@ session_start();
                <a class="readmore" href="Post2-Medicinals .php">Read more</a>
               </div>
             </div>
-            <div class="post"> <!--firs pic-->
+
+            <div class="post">
               <img src="  https://cdn.broadsheet.com.au/melbourne/images/2019/10/24/101234-3859-by%20Aidan%20Rolls%20for%20Leaf%20Supply%20(1).jpg"
                alt=""class="slider-image">
               <div class="post-info">
@@ -140,7 +137,9 @@ session_start();
                 <a class="readmore" href="Post3-IndoorJungle .php">Read more</a>
               </div>
             </div>
-            <div class="post"> <!-- fourth pic-->
+
+
+            <div class="post">
               <img src=" https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXxSzRCnZfzPYs2sKLwaE9jqJFQx5fL76URA&usqp=CAU"
               alt=""class="slider-image">
               <div class="post-info">
@@ -151,9 +150,10 @@ session_start();
                 <a class="readmore" href="Post1-Houseplant Parenting Course!.php">Read more</a>
               </div>
             </div>
+
           </div>
         </div>
-      </div>
+
     </section>
 
     <!--Contact Us-->
@@ -188,7 +188,7 @@ session_start();
     <p id="©"> © 2020 Living Leaves </p>
   </footer>
 
-  <!--Connect JavaScript files-->
+  <!--Connect JavaScript file-->
   <script src="mainJS.js"> </script>
 </body>
 
